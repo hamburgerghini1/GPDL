@@ -1,4 +1,62 @@
 # GPDL Latency tester
+
+** Fix since python-future cannot be compiled from AUR (just for my own reference)
+
+
+# GPDL Installation Guide
+
+## Prerequisites
+- Ensure Python 3.11 or newer is installed.
+- Install required dependencies through the system package manager (`pacman` on Arch Linux).
+
+### Step 1: Install Dependencies
+Some dependencies may be missing or incorrectly installed. The following packages are required:
+
+1. **Install system-wide Python dependencies (if not already installed):**
+
+   ```bash
+   sudo pacman -S python-certifi python-charsets-normalizer python-colorama python-future python-idna python-iso8601 python-numpy python-pygame python-pyserial python-pyyaml python-requests python-serial python-tqdm python-urllib3
+   ```
+
+2. **If certain dependencies are unavailable via AUR, create a Python virtual environment:**
+
+   ```bash
+   python -m venv /path/to/venv
+   source /path/to/venv/bin/activate
+   ```
+
+3. **Install the required Python packages:**
+
+   ```bash
+   pip install certifi charset-normalizer colorama future idna iso8601 numpy pygame pyserial PyYAML requests serial tqdm urllib3
+   ```
+
+### Step 2: Install `future` (if the AUR install fails)
+If the `future` package fails to install directly from the AUR, you can install it via pip within the virtual environment:
+
+1. **Activate your virtual environment if not already done:**
+
+   ```bash
+   source /path/to/venv/bin/activate
+   ```
+
+2. **Install `future` via pip:**
+
+   ```bash
+   pip install future
+   ```
+
+   **Note:** If you encounter an "externally-managed-environment" error, follow the instructions provided for installing pip packages in a virtual environment.
+
+### Step 3: Run the Script
+Once dependencies are installed, navigate to the GPDL directory and run the script:
+
+```bash
+cd /path/to/GPDL
+python GPDL.py
+```
+
+
 **What is GPDL Tester?**  
 GPDL Tester is a tool for measuring latency of gamepad buttons and joysticks. It helps to determine how long it takes from pressing a button or moving a stick on the gamepad to registering this action on the PC. This allows gamers to check the performance of their gamepad and make sure it is working optimally for their games.  
 
