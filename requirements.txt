@@ -1,0 +1,14 @@
+certifi==2024.8.30
+charset-normalizer==3.4.0
+colorama==0.4.6
+future==1.0.0
+idna==3.10
+iso8601==2.1.0
+numpy==2.2.0
+pygame==2.6.1
+pyserial==3.5
+PyYAML==6.0.2
+requests==2.32.3
+serial==0.0.97
+tqdm==4.67.1
+urllib3==2.2.3
